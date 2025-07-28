@@ -29,29 +29,42 @@
     }
     header {
       position: relative;
-      background: #091826 url('images/Banners_940x90.gif') center center no-repeat;
-      background-size: cover;
+      background: var(--primary-bg);
       text-align: center;
-      padding: 140px 20px 80px;
+      padding: 20px;
       border-radius: 8px;
       overflow: hidden;
     }
+    /* Animierter Header-Banner als img, nicht als CSS-Background */
+    .header-banner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      z-index: -1;
+      border-radius: 8px 8px 0 0;
+    }
     .logo {
       width: 100px;
-      position: absolute;
-      top: 20px;
-      left: 20px;
+      position: relative;
+      margin-top: 10px;
+      z-index: 1;
     }
     header h1 {
-      margin: 0 0 10px;
+      margin: 100px 0 10px;
       font-size: 2.8rem;
       color: var(--text-light);
       text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+      z-index: 1;
+      position: relative;
     }
     header p {
       font-size: 1.2rem;
       color: var(--text-light);
       text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+      z-index: 1;
+      position: relative;
     }
     .btn {
       display: inline-block;
@@ -64,6 +77,8 @@
       font-weight: bold;
       border-radius: 4px;
       transition: background 0.3s;
+      z-index: 1;
+      position: relative;
     }
     .btn:hover {
       background: var(--accent-hover);
@@ -108,6 +123,10 @@
 <body>
   <div class="container">
     <header>
+      <!-- Animierter GIF-Banner -->
+      <a href="https://stake.com/?c=f84dc54843" target="_blank">
+        <img src="images/Banners_940x90.gif" alt="Promotional Banner" class="header-banner">
+      </a>
       <a href="https://stake.com/?c=f84dc54843" target="_blank">
         <img src="images/stake_com-logo-white-square.png" alt="Stake.com Logo" class="logo">
       </a>
