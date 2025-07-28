@@ -8,11 +8,9 @@
     /* Corporate Identity Farben */
     :root {
       --primary-bg: #091826;
-      --secondary-bg: #fff;
       --accent: #FFC446;
       --accent-hover: #E6B844;
       --text-light: #fff;
-      --text-dark: #222;
       --card-bg: rgba(255,255,255,0.05);
     }
     body {
@@ -27,48 +25,36 @@
       margin: 0 auto;
       padding: 20px;
     }
-    header {
-      position: relative;
-      background: var(--primary-bg);
-      text-align: center;
-      padding: 20px;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    /* Animierter Header-Banner als img, nicht als CSS-Background */
+    /* Header-Banner als Block vor Header */
     .header-banner {
-      position: absolute;
-      top: 0;
-      left: 0;
+      display: block;
       width: 100%;
       height: auto;
-      z-index: -1;
       border-radius: 8px 8px 0 0;
+      margin-bottom: 20px;
+    }
+    header {
+      text-align: center;
+      padding: 30px 20px;
+      background: var(--primary-bg);
+      border-radius: 0 0 8px 8px;
     }
     .logo {
       width: 100px;
-      position: relative;
-      margin-top: 10px;
-      z-index: 1;
+      margin-bottom: 20px;
     }
     header h1 {
-      margin: 100px 0 10px;
+      margin: 0 0 10px;
       font-size: 2.8rem;
-      color: var(--text-light);
       text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-      z-index: 1;
-      position: relative;
     }
     header p {
       font-size: 1.2rem;
-      color: var(--text-light);
       text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-      z-index: 1;
-      position: relative;
+      margin-bottom: 20px;
     }
     .btn {
       display: inline-block;
-      margin-top: 20px;
       padding: 15px 30px;
       background: var(--accent);
       color: var(--primary-bg);
@@ -77,8 +63,6 @@
       font-weight: bold;
       border-radius: 4px;
       transition: background 0.3s;
-      z-index: 1;
-      position: relative;
     }
     .btn:hover {
       background: var(--accent-hover);
@@ -94,11 +78,12 @@
       color: var(--accent);
     }
     .section p, .section ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
       color: var(--text-light);
     }
-    .section ul {
-      list-style: disc inside;
-    }
+    .section ul { list-style: disc inside; }
     .mid-banner {
       display: block;
       margin: 40px auto;
@@ -122,11 +107,11 @@
 </head>
 <body>
   <div class="container">
+    <!-- Animierter GIF-Banner als statischer Block -->
+    <a href="https://stake.com/?c=f84dc54843" target="_blank">
+      <img src="images/Banners_940x90.gif" alt="Promotional Banner" class="header-banner">
+    </a>
     <header>
-      <!-- Animierter GIF-Banner -->
-      <a href="https://stake.com/?c=f84dc54843" target="_blank">
-        <img src="images/Banners_940x90.gif" alt="Promotional Banner" class="header-banner">
-      </a>
       <a href="https://stake.com/?c=f84dc54843" target="_blank">
         <img src="images/stake_com-logo-white-square.png" alt="Stake.com Logo" class="logo">
       </a>
@@ -174,4 +159,4 @@
   </div>
 </body>
 </html>
-"Animierte Banner als IMG eingebunden"
+<"Header- und Mid-Banner als IMG eingebunden>
